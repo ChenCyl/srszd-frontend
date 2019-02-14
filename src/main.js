@@ -2,6 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import './plugins/element.js'
+import axios from './http'
+import VueProgressiveImage from 'vue-progressive-image'
+
+// 图片渐进式加载
+Vue.use(VueProgressiveImage)
+// import axios from 'axios'
+Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
 

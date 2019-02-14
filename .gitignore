@@ -19,3 +19,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# dbdata
+dbdata-images.json
+dbdata-items.json
+dbdata-videos.json
