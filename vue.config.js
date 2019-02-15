@@ -1,8 +1,8 @@
 const path = require('path')
-const debug = process.env.NODE_ENV !== 'production'
+const debug = process.env.NODE_ENV == 'production'
 
 module.exports = {
-    baseUrl: '/', // 根域上下文目录
+    // baseUrl: '/', // 根域上下文目录 （默认就是这个
     outputDir: 'dist', // 构建输出目录
     assetsDir: 'assets', // 静态资源目录 (js, css, img, fonts)
     lintOnSave: false, // 是否开启eslint保存检测，有效值：ture | false | 'error'
@@ -39,7 +39,7 @@ module.exports = {
     devServer: {
         open: true,
         host: 'localhost',
-        port: 8080,
+        port: 8003,
         https: false,
         hotOnly: false,
         proxy: { // 配置跨域

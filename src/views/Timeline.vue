@@ -15,7 +15,7 @@
         <img :src="item.icon" class="icon-heart" slot="others">
         <p>{{ item.month }}-{{ item.day }}</p>
         <p class="title">
-          <a :href="item.url">{{ item.title }}</a>
+          <a :href="item.url" target="_blank">{{ item.title }}</a>
         </p>
         <p class="desc">{{ item.desc }}</p>
         <img :src="item.image" class="image">
@@ -36,7 +36,7 @@
         <img :src="item.icon" class="icon-heart" slot="others">
         <p>{{ item.month }}-{{ item.day }}</p>
         <p class="title">
-          <a :href="item.url">{{ item.title }}</a>
+          <a :href="item.url" target="_blank">{{ item.title }}</a>
         </p>
         <p class="desc">{{ item.desc }}</p>
         <img :src="item.image" class="image">
