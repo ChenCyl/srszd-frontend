@@ -9,7 +9,9 @@
               <span>寻<span style="color: #2f93fd;">人</span><span style="color: #eb6985;">琪</span>事</span><span class="thanks">Thanks!</span>
             </div>
             <div class="game-rule">
-              <i class="el-icon-warning"></i> 将鼠标放在 77 身上即游戏开始，77 将会跟随鼠标移动。快去寻找 66 吧！
+              <i class="el-icon-warning"></i> 电脑端：将鼠标放在 77 身上（不用按鼠标）开始计时，77 将会跟随鼠标移动。
+              <br>
+              <i class="el-icon-warning"></i> 手机端：触摸迷宫任意位置开始计时，触摸迷宫任意位置都可控制 77 移动。快去寻找 66 吧！
               <br>
               <i class="el-icon-bell"></i> 特别鸣谢像素图制作者 <a href="https://weibo.com/u/3756355105" target="_blank">@YOHUEY</a> 
             </div>
@@ -141,6 +143,7 @@ export default {
           that.sec = that.sec + 1;
           if (that.sec === 60) {
             that.min = that.min + 1;
+            that.sec = 0
           }
         }
         // console.log(that.time)
