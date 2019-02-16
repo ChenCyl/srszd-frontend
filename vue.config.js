@@ -1,5 +1,5 @@
 const path = require('path')
-const debug = process.env.NODE_ENV == 'production'
+const debug = process.env.NODE_ENV !== 'production'
 
 module.exports = {
     // baseUrl: '/', // 根域上下文目录 （默认就是这个

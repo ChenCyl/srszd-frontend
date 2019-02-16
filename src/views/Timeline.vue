@@ -1,5 +1,9 @@
 <template>
+
+ <el-row type="flex" class="row-bg" justify="center">
+      <el-col :span="10" :xs="{span: 21}">
   <timeline>
+    
     <!-- 2019年 -->
     <timeline-title>
       <span style="font-size: 40px;">2019</span>
@@ -43,6 +47,8 @@
       </timeline-item>
     </div>
   </timeline>
+      </el-col>
+ </el-row>
 </template>
 
 <script>
@@ -175,9 +181,9 @@ export default {
 
 <style scoped>
 .timeline {
-  margin-left: 30%;
+  /* margin-left: 30%; */
   margin-top: 50px;
-  width: 40%;
+  /* width: 40%; */
 }
 .icon-heart {
   width: 20px;

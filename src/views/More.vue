@@ -2,7 +2,7 @@
   <!-- 别自动格式化 寻人启事会有空格！ -->
   <div class="more">
     <el-row type="flex" class="row-bg" justify="center">
-      <el-col :span="18">
+      <el-col :span="18" :xs="{span: 24}">
         <el-tabs type="border-card">
           <el-tab-pane label="Game" :lazy="true">
             <div class="title">
@@ -18,21 +18,25 @@
               <i class="el-icon-time"></i>
               {{ min }}:{{ sec }}
             </div>
+            <el-row type="flex" class="row-bg" justify="center" >
+             <el-col :span="15" :xs="{span: 24}">
             <!-- <el-button type="primary" plain>你好</el-button> -->
             <maze class="game" @start="startTimer" @finish="finishGame" @init="initGame" :image-path="image77" :goal-image-path="image66"></maze>
+            </el-col>
+            </el-row>
 
             <el-dialog
-              width="30%"
+              width="300px"
               title="恭喜你帮 77 找到了 66！👏👏🎉🎉🔒🔒"
               :visible.sync="dialogFormVisible"
             >
-              <el-dialog width="20%" title="🤔" :visible.sync="innerVisible" append-to-body>
-                <span>确认提交？</span>
-                <div slot="footer" class="dialog-footer">
-                  <el-button @click="innerVisible = false">取 消</el-button>
-                  <el-button type="primary" @click="submitForm">确 定</el-button>
-                </div>
-              </el-dialog>
+                  <el-dialog width="200px" title="🤔" :visible.sync="innerVisible" append-to-body>
+                    <span>确认提交？</span>
+                    <div slot="footer" class="dialog-footer">
+                      <el-button @click="innerVisible = false">取 消</el-button>
+                      <el-button type="primary" @click="submitForm">确 定</el-button>
+                    </div>
+                  </el-dialog>
               <div class="record">耗时 {{ form.record }}，留下你的战绩吧！</div>
               <br>
               <el-form :model="form" :rules="rules">
@@ -48,15 +52,17 @@
                 <el-button type="primary" @click="controlInner">确 定</el-button>
               </div>
             </el-dialog>
-            <el-table :data="forms" style="width: 100%" :show-header=false :fit=false>
+
+            
+            <el-table :data="forms" style="width: 100%" :show-header=false>
                  <el-table-column width="200">
                 <template slot-scope="scope">
                   <span style="margin-left: 10px">{{ new Date(scope.row.date).toLocaleString() }}</span>
                 </template>
               </el-table-column>
-              <el-table-column prop="name" width="180"></el-table-column>
+              <el-table-column prop="name" width="160"></el-table-column>
               <el-table-column prop="message" width="560"></el-table-column>
-              <el-table-column width="150">
+              <el-table-column width="110" fixed="right">
                 <template slot-scope="scope">
                     <i class="el-icon-time"></i>
                   <span style="margin-left: 10px">{{ scope.row.record }}</span>
@@ -184,8 +190,9 @@ export default {
 
 <style scoped>
 .game {
-  width: 700px;
+  width: 100%;
   height: 400px;
+  /* height: 20px; */
   margin: 30px auto;
   /* margin-bottom: 60px */
 }

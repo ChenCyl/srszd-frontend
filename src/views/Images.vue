@@ -1,18 +1,17 @@
 <template>
   <div class="images">
     <el-row type="flex" class="row-bg" justify="center">
-      <el-col :span="18">
+      <el-col :xs="{span: 24}" :span="18">
         <el-tabs type="border-card" @tab-click="showImages">
           <el-tab-pane label="All">
             <div class="container">
               <el-row>
-                <el-col :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
+                <el-col :xs="{span: 12}" :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
                   <el-card :body-style="{ padding: '0px' }" shadow="hover">
                     <div class="image-frame">
                       <a :href="videoInfo.url" target="_blank">
-                        <progressive-img
+                        <progressive-background
                           :src="videoInfo.url"
-                          class="image"
                           :placeholder="placeholder"
                         />
                       </a>
@@ -45,13 +44,12 @@
           <el-tab-pane label="玩家绘">
             <div class="container">
               <el-row>
-                <el-col :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
+                <el-col :xs="{span: 12}" :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
                   <el-card :body-style="{ padding: '0px' }" shadow="hover">
                     <div class="image-frame">
                       <a :href="videoInfo.url" target="_blank">
-                        <progressive-img
+                        <progressive-background
                           :src="videoInfo.url"
-                          class="image"
                           :placeholder="placeholder"
                         />
                       </a>
@@ -84,13 +82,12 @@
           <el-tab-pane label="Moment">
             <div class="container">
               <el-row>
-                <el-col :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
+                <el-col :xs="{span: 12}" :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
                   <el-card :body-style="{ padding: '0px' }" shadow="hover">
                     <div class="image-frame">
                       <a :href="videoInfo.url" target="_blank">
-                        <progressive-img
+                       <progressive-background
                           :src="videoInfo.url"
-                          class="image"
                           :placeholder="placeholder"
                         />
                       </a>
@@ -243,16 +240,11 @@ export default {
   padding: 0;
   /* float: right; */
 }
-
-.image {
-  width: 100%;
-  display: block;
-}
-
 .image-frame {
   /* 把溢出框的图片部分 hidden */
   overflow: hidden;
   height: 225px;
+
 }
 
 .clearfix:before,

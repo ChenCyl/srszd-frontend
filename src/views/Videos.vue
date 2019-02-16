@@ -1,22 +1,24 @@
 <template>
   <div class="videos">
     <el-row type="flex" class="row-bg" justify="center">
-      <el-col :span="18">
+      <el-col :span="18" :xs="{span: 24}">
         <el-tabs type="border-card" @tab-click="showVideos">
           <el-tab-pane label="All">
             <div class="container">
               <el-row>
-                <el-col :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
+                <el-col
+                :xs="{span: 12}"
+                :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
                   <el-card :body-style="{ padding: '0px' }" shadow="hover">
                     <a :href="videoInfo.url" target="_blank">
-                      <progressive-img
+                      <progressive-background
                         :src="videoInfo.image"
                         class="image"
                         :placeholder="placeholder"
                       />
                     </a>
                     <div style="padding: 14px">
-                      <div style="height: 70px">{{ videoInfo.title }}</div>
+                      <div class="title">{{ videoInfo.title }}</div>
                       <div class="bottom clearfix">
                         <time
                           class="time"
@@ -62,17 +64,17 @@
           <el-tab-pane label="玩家剪辑">
             <div class="container">
               <el-row>
-                <el-col :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
+                <el-col :xs="{span: 12}" :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
                   <el-card :body-style="{ padding: '0px' }" shadow="hover">
                     <a :href="videoInfo.url" target="_blank">
-                      <progressive-img
+                      <progressive-background
                         :src="videoInfo.image"
                         class="image"
                         :placeholder="placeholder"
                       />
                     </a>
                     <div style="padding: 14px;">
-                      <div style="height: 70px">{{ videoInfo.title }}</div>
+                      <div class="title">{{ videoInfo.title }}</div>
                       <div class="bottom clearfix">
                         <time
                           class="time"
@@ -100,17 +102,17 @@
           <el-tab-pane label="Moment">
             <div class="container">
               <el-row>
-                <el-col :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
+                <el-col :xs="{span: 12}" :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
                   <el-card :body-style="{ padding: '0px' }" shadow="hover">
                     <a :href="videoInfo.url" target="_blank">
-                      <progressive-img
+                      <progressive-background
                         :src="videoInfo.image"
                         class="image"
                         :placeholder="placeholder"
                       />
                     </a>
                     <div style="padding: 14px;">
-                      <div style="height: 70px">{{ videoInfo.title }}</div>
+                      <div class="title">{{ videoInfo.title }}</div>
                       <div class="bottom clearfix">
                         <time
                           class="time"
@@ -138,17 +140,17 @@
           <el-tab-pane label="官方视频">
             <div class="container">
               <el-row>
-                <el-col :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
+                <el-col :xs="{span: 12}" :span="6" v-for="(videoInfo, index) in videoInfos" :key="index" :offset="0">
                   <el-card :body-style="{ padding: '0px' }" shadow="hover">
                     <a :href="videoInfo.url" target="_blank">
-                      <progressive-img
+                      <progressive-background
                         :src="videoInfo.image"
                         class="image"
                         :placeholder="placeholder"
                       />
                     </a>
                     <div style="padding: 14px;">
-                      <div style="height: 70px">{{ videoInfo.title }}</div>
+                      <div class="title">{{ videoInfo.title }}</div>
                       <div class="bottom clearfix">
                         <time
                           class="time"
@@ -319,15 +321,24 @@ export default {
 
 .el-card {
   margin-bottom: 15px;
-  margin-right: 10px;
-  height: 290px;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 250px;
 }
+
 a {
   text-decoration-line: none;
 }
+
 .el-dropdown-link {
   /* color: #eb6985; */
   font-family: PingFangSC-light, Avenir, Helvetica, Arial, Hiragino Sans GB,
     Microsoft YaHei, sans-serif;
 }
+.title {
+  font-size: 14px;
+  height: 40px;
+  overflow: hidden;
+}
+
 </style>
