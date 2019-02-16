@@ -24,3 +24,6 @@ yarn-error.log*
 dbdata-images.json
 dbdata-items.json
 dbdata-videos.json
+
+# http request
+*.http

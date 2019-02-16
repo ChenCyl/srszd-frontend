@@ -20,9 +20,7 @@
                     <div style="padding: 14px">
                       <div class="title">{{ videoInfo.title }}</div>
                       <div class="bottom clearfix">
-                        <time
-                          class="time"
-                        >{{ new Date(videoInfo.date).toLocaleDateString() }}</time>
+                        
                         <el-button type="text" class="button">
                           <a
                             :href="videoInfo.authorLink"
@@ -44,6 +42,9 @@
                             </el-dropdown-menu>
                           </el-dropdown>
                         </el-button>
+                        <div
+                          class="time"
+                        >{{ new Date(videoInfo.date).toLocaleDateString() }}</div>
                       </div>
                     </div>
                   </el-card>
@@ -76,12 +77,13 @@
                     <div style="padding: 14px;">
                       <div class="title">{{ videoInfo.title }}</div>
                       <div class="bottom clearfix">
-                        <time
-                          class="time"
-                        >{{ new Date(videoInfo.date).toLocaleDateString() }}</time>
+                  
                         <el-button type="text" class="button">
                           <a :href="videoInfo.authorLink" target="_blank">{{ videoInfo.author }}</a>
                         </el-button>
+                         <div
+                          class="time"
+                        >{{ new Date(videoInfo.date).toLocaleDateString() }}</div>
                       </div>
                     </div>
                   </el-card>
@@ -114,12 +116,13 @@
                     <div style="padding: 14px;">
                       <div class="title">{{ videoInfo.title }}</div>
                       <div class="bottom clearfix">
-                        <time
-                          class="time"
-                        >{{ new Date(videoInfo.date).toLocaleDateString() }}</time>
+                       
                         <el-button type="text" class="button">
                           <a :href="videoInfo.authorLink" target="_blank">{{ videoInfo.author }}</a>
                         </el-button>
+                         <div
+                          class="time"
+                        >{{ new Date(videoInfo.date).toLocaleDateString() }}</div>
                       </div>
                     </div>
                   </el-card>
@@ -152,9 +155,7 @@
                     <div style="padding: 14px;">
                       <div class="title">{{ videoInfo.title }}</div>
                       <div class="bottom clearfix">
-                        <time
-                          class="time"
-                        >{{ new Date(videoInfo.date).toLocaleDateString() }}</time>
+                       
                         <el-button type="text" class="button">
                           <a
                             :href="videoInfo.authorLink"
@@ -176,6 +177,9 @@
                             </el-dropdown-menu>
                           </el-dropdown>
                         </el-button>
+                         <div
+                          class="time"
+                        >{{ new Date(videoInfo.date).toLocaleDateString() }}</div>
                       </div>
                     </div>
                   </el-card>
@@ -290,6 +294,7 @@ export default {
 .time {
   font-size: 13px;
   color: #999;
+  margin-top: 10px
 }
 
 .bottom {
@@ -299,7 +304,8 @@ export default {
 
 .button {
   padding: 0;
-  float: right;
+  
+  /* float: right; */
 }
 
 .image {
@@ -323,7 +329,7 @@ export default {
   margin-bottom: 15px;
   margin-right: 5px;
   margin-left: 5px;
-  height: 250px;
+  height: 270px;
 }
 
 a {
