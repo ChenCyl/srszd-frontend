@@ -32,23 +32,23 @@
       </a>
       
       <a href="#" class="polaroid img7">
-        <img src="../assets/9.jpg" alt>「天生一对感觉多特别」
+        <img src="../assets/9.jpg" alt>「天生一对感觉够特别」
       </a>
       <a href="#" class="small polaroid img8">
         <img src="../assets/8.jpg" alt>「只要一个眼神心领神会」
       </a>
       <a href="#" class="large polaroid img9">
-        <img src="../assets/10.jpg" alt>「感受那空气那个雨即使并不在一起」
+        <img src="../assets/10.jpg" alt>「何时何地 你有我 无可畏」
       </a>
       <a href="#" class="polaroid img10">
-        <img src="../assets/11.jpg" alt>Feeling feeling feeling same, 
+        <img src="../assets/11.jpg" alt>The feeling feeling feeling same, 
         I will never never never let you go.
       </a>
       <a href="#" class="polaroid img11">
         <img src="../assets/12.jpg" alt>「认真聆听彼此烦恼喜悲」
       </a>
       <a href="#" class="polaroid img12">
-        <img src="../assets/13.jpg" alt>「超乎一切 baby you are soulmate.」
+        <img src="../assets/13.jpg" alt>「感受 那空气 那飞雨 即使并不在一起」
       </a>
       <a href="#" class="polaroid img13">
         <img src="../assets/6.jpg" alt>「内心里真实真切的体会」

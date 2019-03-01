@@ -24,6 +24,7 @@ yarn-error.log*
 dbdata-images.json
 dbdata-items.json
 dbdata-videos.json
+dbdata-forms.json
 
 # http request
 *.http
